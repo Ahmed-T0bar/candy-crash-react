@@ -1,6 +1,6 @@
 # Clone candy-crash game
 
-This is follow up to this (tutorial)[https://www.youtube.com/watch?v=PBrEq9Wd6_U]
+This is follow up to this [tutorial](https://www.youtube.com/watch?v=PBrEq9Wd6_U)
 
 ## About
 
