@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  height: calc(100vh - (58px + 59px));
+}
+
+.notTheGame {
+  height: unset;
+}
+
+main > * {
+  flex: 1 0 100%;
+  max-width: 350px;
+}
+
+.nav-item {
+  margin-left: 10px;
+}
+
+.bg-icon {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.user-info .icon {
+  display: inline;
+  font-size: 16px;
+}
+
+.user-info p {
+  display: inline;
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+
+.user-info p span {
+  margin: 0 5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.card {
+  margin: 20px;
+}
+
+/* Start editing candy game */
+.app {
+  margin: 0;
+  padding: 10px;
+}
+.game {
+  display: flex;
+  flex: unset;
+  max-width: unset;
+  width: 560px;
+  height: 560px;
+  flex-wrap: wrap;
+  outline: 2px outset #000;
+}
+.app .game img {
+  width: calc(100% / 8);
+  height: calc(100% / 8);
+  flex-basis: calc(100% / 8);
+}
+
+@media (max-width: 630px) {
+  .game {
+    height: 500px;
+  }
+}
