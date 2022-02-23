@@ -82,6 +82,6 @@ main > * {
 
 @media (max-width: 630px) {
   .game {
-    height: 500px;
+    height: 320px;
   }
 }
