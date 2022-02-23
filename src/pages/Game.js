@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const width = 8;
 const candyColors = ["blue", "red", "green", "yellow", "orange", "purple"];
@@ -9,7 +9,7 @@ const Game = () => {
   const [blockBeingReplaced, setBlockBeingReplaced] = useState(null);
 
   // Check if match (row of four, row of three, column of four, column of three)
-  const checkForColumnOfFour = () => {
+  const checkForColumnOfFour = useCallback(() => {
     for (var i = 0; i <= 39; i++) {
       const columnofFour = [i, i + width, i + width * 2, i + width * 3];
       const currentColor = currentColorArrangment[i];
@@ -23,9 +23,9 @@ const Game = () => {
         return true;
       }
     }
-  };
+  }, [currentColorArrangment]);
 
-  const checkForRowOfFour = () => {
+  const checkForRowOfFour = useCallback(() => {
     for (var i = 0; i < 64; i++) {
       const rowOfFour = [i, i + 1, i + 2, i + 3];
       const currentColor = currentColorArrangment[i];
@@ -46,8 +46,8 @@ const Game = () => {
         return true;
       }
     }
-  };
-  const checkForColumnOfThree = () => {
+  }, [currentColorArrangment]);
+  const checkForColumnOfThree = useCallback(() => {
     for (var i = 0; i <= 47; i++) {
       const columnOfThree = [i, i + width, i + width * 2];
       const currentColor = currentColorArrangment[i];
@@ -61,8 +61,8 @@ const Game = () => {
         return true;
       }
     }
-  };
-  const checkForRowOfThree = () => {
+  }, [currentColorArrangment]);
+  const checkForRowOfThree = useCallback(() => {
     for (var i = 0; i < 64; i++) {
       const rowOfThree = [i, i + 1, i + 2];
       const currentColor = currentColorArrangment[i];
@@ -80,7 +80,7 @@ const Game = () => {
         return true;
       }
     }
-  };
+  }, [currentColorArrangment]);
 
   // Generate candy colors
   const generateListOfCandies = () => {
@@ -94,7 +94,7 @@ const Game = () => {
   };
 
   // Move blank blocks to the top and re-fill it
-  const moveToTheTop = () => {
+  const moveToTheTop = useCallback(() => {
     for (let i = 0; i < 64 - width; i++) {
       const firstRow = [0, 1, 2, 3, 4, 5, 6, 7];
       const isFirstRow = firstRow.includes(i);
@@ -111,7 +111,7 @@ const Game = () => {
         currentColorArrangment[i] = "";
       }
     }
-  };
+  }, [currentColorArrangment]);
 
   // Drag Functions
   const dragStart = (e) => {
