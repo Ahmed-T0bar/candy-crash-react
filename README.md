@@ -4,7 +4,7 @@ This is follow up to this [tutorial](https://www.youtube.com/watch?v=PBrEq9Wd6_U
 
 ## About
 
-This is practice on react and how to use Hooks by Ania Kubów. the t. I didn't stop on the tutorial's features, but, I added features on my own.
+This is practice on react and how to use Hooks by Ania Kubów. I didn't stop on the tutorial's features I also added features on my own more than the tutorial had provided.
 
 ## What techs I had used to build this app?
 
