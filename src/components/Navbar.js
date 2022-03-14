@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { PlayerContext } from "../helper/Context";
 
 import {
@@ -28,13 +28,11 @@ const Navbar = () => {
     return (
       <MDBNavbar expand="lg" light bgColor="light">
         <MDBContainer fluid>
-          <MDBNavbarBrand href="/">
-            <GiCandyCanes className="bg-icon" /> Candy Crash
+          <MDBNavbarBrand>
+            <Link to="/"><GiCandyCanes className="bg-icon" /> Candy Crash</Link>
           </MDBNavbarBrand>
           <MDBBtn outline color="primary" size="sm" type="button">
-            <a href="/game" className="link-primary">
-              Start
-            </a>
+            <Link to="/game">Start</Link>
           </MDBBtn>
         </MDBContainer>
       </MDBNavbar>
@@ -44,9 +42,11 @@ const Navbar = () => {
     return (
       <MDBNavbar expand="lg" light bgColor="light">
         <MDBContainer fluid>
-          <MDBNavbarBrand href="/">
-            <GiCandyCanes style={{ fontSize: "24px", marginLeft: "5px" }} />{" "}
-            Candy Crash ||
+          <MDBNavbarBrand>
+            <Link to="/">
+              <GiCandyCanes style={{ fontSize: "24px", marginLeft: "5px" }} />{" "}
+              Candy Crash ||
+            </Link>
           </MDBNavbarBrand>
 
           <MDBNavbarToggler
@@ -87,16 +87,12 @@ const Navbar = () => {
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBBtn outline color="secondary" size="sm" type="button">
-                  <a href="/dashboard" className="link-secondary">
-                    Dashboard
-                  </a>
+                  <Link to="/dashboard">Dashboard</Link>
                 </MDBBtn>
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBBtn outline color="danger" size="sm" type="button">
-                  <a href="/" className="link-danger">
-                    Exit
-                  </a>
+                  <Link to="/">Exit</Link>
                 </MDBBtn>
               </MDBNavbarItem>
             </MDBNavbarNav>

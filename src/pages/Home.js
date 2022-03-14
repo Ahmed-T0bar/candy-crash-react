@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { PlayerContext } from "../helper/Context";
 import { MDBInputGroup, MDBInputGroupElement, MDBBtn } from "mdb-react-ui-kit";
 import { BsArrowRight } from "react-icons/bs";
@@ -34,8 +35,10 @@ const Home = () => {
             type="text"
             onChange={(e) => setPlayerName(e.target.value)}
           />
-          <MDBBtn outline>
-            <BsArrowRight style={{ fontSize: "17px" }} />
+          <MDBBtn outline onClick={handleSubmit}>
+            <Link to="/game">
+              <BsArrowRight style={{ fontSize: "17px" }} />
+            </Link>
           </MDBBtn>
         </MDBInputGroup>
       </form>
