@@ -20,6 +20,10 @@ main {
   height: calc(100vh - (58px + 59px));
 }
 
+a {
+  color: #000 !important;
+}
+
 .notTheGame {
   height: unset;
 }
@@ -27,6 +31,11 @@ main {
 main > * {
   flex: 1 0 100%;
   max-width: 350px;
+}
+
+.navbar-light .navbar-brand {
+  border-right: 2px solid #000;
+  padding-right: 10px;
 }
 
 .nav-item {

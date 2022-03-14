@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { PlayerContext } from "../helper/Context";
 
 import {
   MDBContainer,
@@ -45,7 +44,7 @@ const Navbar = () => {
           <MDBNavbarBrand>
             <Link to="/">
               <GiCandyCanes style={{ fontSize: "24px", marginLeft: "5px" }} />{" "}
-              Candy Crash ||
+              Candy Crash
             </Link>
           </MDBNavbarBrand>
 
