@@ -16,3 +16,4 @@ This is practice on react and how to use Hooks by Ania Kubów. the t. I didn't s
 ## Features I added on my own
 
     - Multiple pages (Home, Game, Dashboard)
+    - Make design responsive
